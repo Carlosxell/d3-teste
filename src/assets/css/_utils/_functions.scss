@@ -1,0 +1,11 @@
+@import '_variables';
+
+@function pxToEm($size) {
+  $remSize: $size / $base-fontsize;
+  @return #{$remSize}em;
+}
+
+@function pxToRem($size) {
+  $remSize: $size / $base-fontsize;
+  @return #{$remSize}rem;
+}

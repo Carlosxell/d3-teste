@@ -1,0 +1,71 @@
+@import '../_utils/_imports';
+
+.header {
+  background-color: $color-dark;
+  box-shadow: 0 0 pxToRem(4) 0 $color-black;
+  height: pxToRem(48);
+  left: 0;
+  position: fixed;
+  right: 0;
+  transition: background-color .12s ease-in-out, height .12s ease-in-out;
+  top: 0;
+
+  &_content {
+    @include flexbox-container(flex, null, wrap, space-between, center, center);
+    max-width: pxToRem(1440);
+    margin: 0 auto;
+    padding: pxToRem(12) pxToRem(8);
+    transition: padding .12s ease-in-out;
+    width: 100%;
+  }
+
+  &_title {
+    font-size: pxToRem(18);
+    font-weight: 800;
+    transition: font-size .12s ease-in-out;
+    text-shadow: $color-gray;
+  }
+
+  &_themeBox {
+    @include flexbox-container(inline-flex, null, wrap, space-between, null, center);
+    font-size: pxToRem(12);
+    font-weight: 500;
+
+    &_img,
+    &_text {
+      display: inline-block;
+    }
+
+    &_img {
+      display: inline-block;
+      height: pxToRem(12);
+      width: pxToRem(12);
+    }
+
+    &_text {
+      margin: 0 pxToRem(8) 0 pxToRem(6);
+    }
+  }
+
+  @media(min-width: pxToRem(480)) {
+    &_themeBox {
+      font-size: pxToRem(14);
+
+      &_img {
+        margin-top: pxToRem(2);
+      }
+    }
+  }
+
+  @media(min-width: pxToRem(992)) {
+    height: pxToRem(80);
+
+    &_content {
+      padding: pxToRem(30) pxToRem(30);
+    }
+
+    &_title {
+      font-size: pxToRem(24);
+    }
+  }
+}

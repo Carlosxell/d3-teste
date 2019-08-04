@@ -1,0 +1,27 @@
+@import '../_utils/_imports';
+
+.app {
+  background-color: $color-bg-dark;
+  color: $color-bg-light;
+
+  &_body {
+    display: inline-block;
+    @include calc(min-height, '100vh - #{pxToRem(68)}', null);
+    max-width: pxToRem(1440);
+    margin: pxToRem(68) auto 0;
+    padding: pxToRem(12) pxToRem(8);
+    transition: background-color .12s ease-in-out, height .12s ease-in-out, padding .12s ease-in-out;
+    will-change: contents;
+    width: 100%;
+  }
+
+  @media(min-width: pxToRem(480)) {}
+
+  @media(min-width: pxToRem(992)) {
+    &_body {
+      @include calc(min-height, '100vh - #{pxToRem(100)}', null);
+      margin-top: pxToRem(100);
+      padding: pxToRem(30) pxToRem(30);
+    }
+  }
+}
