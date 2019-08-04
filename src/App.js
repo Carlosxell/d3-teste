@@ -8,8 +8,15 @@ import ErrorPage from './views/404';
 import PreviewPage from './views/Preview';
 import './App.css'
 import './assets/css/app.scss'
+import {handleGetCountries, handleLoader} from "./actions";
 
 class App extends Component {
+  async componentWillMount() {
+    this.props.openLoader({ loaderActive: true, loaderText: 'Search for data.' });
+    await this.props.getCountries();
+    this.props.openLoader({ loaderActive: false, loaderText: '' });
+  }
+
   render() {
     const { defaultTheme } = this.props;
 
@@ -33,9 +40,13 @@ class App extends Component {
 }
 
 const mapStateToProps = store => ({
-  defaultTheme: store.themes.defaultTheme
+  defaultTheme: store.themes.defaultTheme,
+  countries: store.countries.countries,
 });
 
-const mapDispatchToProps = (dispatch) => ({});
+const mapDispatchToProps = (dispatch) => ({
+  getCountries: () => dispatch(handleGetCountries()),
+  openLoader: (obj) => dispatch(handleLoader(obj))
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

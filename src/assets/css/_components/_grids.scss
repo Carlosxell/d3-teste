@@ -1,0 +1,28 @@
+@import '../_utils/_imports';
+
+.grid {
+  @include flexbox-container(flex, null, wrap, space-between, null, center);
+
+  &_col {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media(min-width: pxToRem(640)) {
+    &_col {
+      @include calc(max-width, '(100% - #{pxToRem(30)}) / 2', null);
+    }
+  }
+
+  @media(min-width: pxToRem(768)) {
+    &_col {
+      @include calc(max-width, '(100% - #{pxToRem(60)}) / 3', null);
+    }
+  }
+
+  @media(min-width: pxToRem(992)) {
+    &_col {
+      @include calc(max-width, '(100% - #{pxToRem(90)}) / 4', null);
+    }
+  }
+}

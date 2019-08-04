@@ -1,0 +1,68 @@
+@import '../_utils/_imports';
+
+.cardCountry {
+  background-color: $color-dark;
+  border-radius: pxToRem(4);
+  display: inline-block;
+  margin-bottom: pxToRem(20);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow .12s ease-in-out;
+  text-decoration: none;
+  width: 100%;
+
+  &_imgBox {
+    background: transparent no-repeat center center;
+    background-size: cover;
+    display: inline-block;
+    min-height: pxToRem(140);
+    position: relative;
+    transition: box-shadow .12s ease-in-out;
+    width: 100%;
+  }
+
+  &_body {
+    color: $color-white;
+    display: block;
+    padding: pxToRem(10) pxToRem(15) pxToRem(20);
+    text-decoration: none;
+
+    &_title {
+      font-size: pxToRem(18);
+      margin-bottom: pxToRem(20);
+    }
+
+    &_list {
+      font-size: pxToRem(14);
+      font-weight: 400;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &_item {
+        margin-bottom: pxToRem(8);
+      }
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {}
+
+  @media(min-width: pxToRem(768)) {
+    &_imgBox {
+      min-height: pxToRem(120);
+    }
+
+    &_body {
+      padding: pxToRem(15) pxToRem(20) pxToRem(30);
+    }
+  }
+
+  @media(min-width: pxToRem(1200)) {
+    &_imgBox {
+      min-height: pxToRem(160);
+    }
+  }
+}

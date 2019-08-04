@@ -3,7 +3,7 @@
 .app {
   background-color: $color-bg-dark;
   color: $color-bg-light;
-  transition: background-color .25s ease-in-out, color .25s ease-in-out;
+  transition: background-color .12s ease-in-out, color .12s linear;
 
   &_body {
     display: inline-block;
