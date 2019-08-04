@@ -27,6 +27,7 @@
   }
 
   &_themeBox {
+    cursor: pointer;
     @include flexbox-container(inline-flex, null, wrap, space-between, null, center);
     font-size: pxToRem(12);
     font-weight: 500;
