@@ -12,6 +12,7 @@
 .formInput {
   background: $color-dark no-repeat center center;
   background-size: pxToRem(16) pxToRem(16);
+  border-radius: pxToEm(4);
   background-position-x: pxToRem(12);
   background-position-y: 50%;
   -ms-background-position-x: pxToEm(12);
