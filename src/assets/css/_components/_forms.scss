@@ -21,4 +21,26 @@
   color: $color-white;
   font-size: pxToRem(14);
   padding: pxToRem(8) pxToRem(4) pxToRem(8) pxToRem(40);
+
+
+
+  &:-moz-placeholder {
+    color: $color-white;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color-white;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color-white;
+  }
+
+  @media(min-width: pxToEm(768)) {
+    width: pxToEm(320);
+  }
+
+  @media(min-width: pxToEm(768)) {
+    width: pxToEm(420);
+  }
 }

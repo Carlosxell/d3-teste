@@ -55,6 +55,12 @@
 
       &_img {
         margin-top: pxToRem(2);
+        height: pxToRem(16);
+        width: pxToRem(16);
+      }
+
+      &_text {
+        font-size: pxToEm(18);
       }
     }
   }

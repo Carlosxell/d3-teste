@@ -26,5 +26,18 @@
     background-color: $color-white;
     box-shadow: 0 0  pxToRem(4) darken($color-gray, 25%);
     color: $color-dark;
+
+
+    &:-moz-placeholder {
+      color: $color-dark;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-dark;
+    }
   }
 }
