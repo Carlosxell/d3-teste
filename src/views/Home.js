@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import CardCountry from '../components/CardCountry';
-import { connect } from 'react-redux'
-import { handleGetCountries, handleLoader } from '../actions/index'
+import { connect } from 'react-redux';
+import { handleGetCountries, handleLoader } from '../actions/index';
+import searchIcon from '../assets/img/search.svg';
+import searchIconGray from '../assets/img/search-gray.svg';
 
 class HomePage extends Component {
   constructor(props) {
@@ -61,6 +63,7 @@ class HomePage extends Component {
           <div className='form'>
             <div className='formGroup'>
               <input className='formInput'
+                     style={{ backgroundImage: 'url(' + (this.props.defaultTheme ? searchIcon : searchIconGray) + ')' }}
                      id='search'
                      name='search'
                      onChange={ this.filterList }
@@ -82,7 +85,11 @@ class HomePage extends Component {
 }
 
 
-const mapStateToProps = store => ({ countries: store.countries.countries, categories: store.countries.categories });
+const mapStateToProps = store => ({
+  countries: store.countries.countries,
+  categories: store.countries.categories,
+  defaultTheme: store.themes.defaultTheme,
+});
 const mapDispatchToProps = (dispatch) => ({
   getCountries: () => dispatch(handleGetCountries()),
   openLoader: (obj) => dispatch(handleLoader(obj))

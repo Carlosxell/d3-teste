@@ -9,4 +9,15 @@
   margin-bottom: pxToRem(20);
 }
 
-.formInput {}
+.formInput {
+  background: $color-dark no-repeat center center;
+  background-size: pxToRem(16) pxToRem(16);
+  background-position-x: pxToRem(12);
+  background-position-y: 50%;
+  -ms-background-position-x: pxToEm(12);
+  -ms-background-position-y: 50%;
+  border: none;
+  color: $color-white;
+  font-size: pxToRem(14);
+  padding: pxToRem(8) pxToRem(4) pxToRem(8) pxToRem(40);
+}
