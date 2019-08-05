@@ -1,6 +1,7 @@
 @import '../_utils/_imports';
 
 .form {
+  @include flexbox-container(flex, null, wrap, space-between, center, null);
   margin-bottom: pxToRem(20);
 }
 

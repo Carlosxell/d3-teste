@@ -1,7 +1,7 @@
 @import '../_utils/_imports';
 
 .grid {
-  @include flexbox-container(flex, null, wrap, space-between, null, center);
+  @include flexbox-container(flex, null, wrap, space-between, null, null);
 
   &_col {
     max-width: 100%;

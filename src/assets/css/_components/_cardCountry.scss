@@ -19,6 +19,12 @@
     position: relative;
     transition: box-shadow .12s ease-in-out;
     width: 100%;
+
+    &_img {
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
   }
 
   &_body {
