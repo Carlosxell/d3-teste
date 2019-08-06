@@ -6,12 +6,12 @@
 
   .header {
     background-color: $color-white;
-    box-shadow: 0 0 pxToRem(4) 0 $color-dark-gray;
+    box-shadow: 0 0 pxToRem(4) darken($color-gray, 25%);
   }
 
   .cardCountry {
     background-color: $color-white;
-    box-shadow: 0 0  pxToRem(4) darken($color-gray, 25%);
+    box-shadow: 0 0 pxToRem(4) darken($color-gray, 25%);
 
     &_imgBox {
       box-shadow: 0 0 pxToRem(4) darken($color-gray, 25%);
@@ -24,9 +24,8 @@
 
   .formInput {
     background-color: $color-white;
-    box-shadow: 0 0  pxToRem(4) darken($color-gray, 25%);
+    box-shadow: 0 0 pxToRem(4) darken($color-gray, 25%);
     color: $color-dark;
-
 
     &:-moz-placeholder {
       color: $color-dark;
@@ -37,6 +36,19 @@
     }
 
     &::-webkit-input-placeholder {
+      color: $color-dark;
+    }
+  }
+
+  .btnBack {
+    background-color: $color-white;
+    box-shadow: 0 0 pxToRem(4) darken($color-gray, 25%);
+    color: $color-dark;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
       color: $color-dark;
     }
   }

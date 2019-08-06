@@ -44,3 +44,37 @@
     width: pxToEm(420);
   }
 }
+
+.btnBack {
+  background-color: $color-dark;
+  box-shadow: 0 0 pxToRem(4) 0 $color-black;
+  border-radius: pxToEm(4);
+  @include flexbox-container(inline-flex, null, null, space-between, center, null);
+  padding: pxToEm(6) pxToEm(12) pxToEm(4);
+  text-decoration: none;
+
+  &_boxImage {
+    display: inline-block;
+    padding-left: pxToEm(4);
+
+    &_img {
+      height: pxToEm(18);
+      width: pxToEm(18);
+    }
+  }
+
+  &_text {
+    display: inline-block;
+    font-size: pxToEm(16);
+    font-width: 600;
+    margin-bottom: pxToEm(4);
+    padding-left: pxToEm(12);
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $color-white;
+  }
+}

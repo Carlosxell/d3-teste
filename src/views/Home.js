@@ -84,7 +84,6 @@ class HomePage extends Component {
   }
 }
 
-
 const mapStateToProps = store => ({
   countries: store.countries.countries,
   categories: store.countries.categories,

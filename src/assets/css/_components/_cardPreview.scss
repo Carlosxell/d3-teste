@@ -1,0 +1,58 @@
+@import '../_utils/_imports';
+
+.cardPreview {
+  margin-top: pxToEm(48);
+
+  &_boxImg {
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+    width: 100%;
+
+    &_img {
+      height: 100%;
+      left: 0;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  &_body {
+    color: $color-white;
+    display: block;
+    padding: pxToRem(10) pxToRem(15) pxToRem(20);
+    text-decoration: none;
+
+    &_title {
+      font-size: pxToRem(18);
+      margin-bottom: pxToRem(20);
+    }
+
+    &_list {
+      font-size: pxToRem(14);
+      font-weight: 400;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &_item {
+        margin-bottom: pxToRem(8);
+      }
+    }
+  }
+
+  @media(min-width: pxToRem(692)) {
+    &_imgBox {
+      min-height: pxToRem(120);
+    }
+
+    &_body {
+      padding: pxToRem(15) pxToRem(20) pxToRem(30);
+    }
+  }
+
+  @media(min-width: pxToRem(1200)) {}
+}
