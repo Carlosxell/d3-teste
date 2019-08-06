@@ -41,7 +41,7 @@
       padding: 0;
 
       &_item {
-        margin-bottom: pxToRem(12);
+        margin-bottom: pxToRem(16);
       }
     }
   }
@@ -49,6 +49,11 @@
   @media(min-width: pxToRem(568)) {
     &_body {
       display: inline-block;
+
+      &_title {
+        font-size: pxToRem(20);
+        margin-bottom: pxToRem(48);
+      }
 
       &_grid {
         @include flexbox-container(flex, null, wrap, space-between, null, null);
@@ -73,11 +78,20 @@
   }
 
   @media(min-width: pxToRem(768)) {
-    @include flexbox-container(flex, null, space-between, null, center, center);
+    @include flexbox-container(flex, null, null, space-between, center, center);
 
     &_boxImg {
       padding-top: 32.25%;
-      @include calc(width, '(100% - #{pxToRem(10)}) / 2', null);
+      @include calc(width, '(100% - #{pxToRem(40)}) / 2', null);
+    }
+
+    &_body {
+      width: 50%;
+
+      &_title {
+        font-size: pxToRem(32);
+        margin-bottom: pxToRem(48);
+      }
     }
   }
 
