@@ -6,11 +6,10 @@
   transition: background-color .12s ease-in-out, color .12s linear;
 
   &_body {
-    display: inline-block;
-    @include calc(min-height, '100vh - #{pxToRem(68)}', null);
+    @include calc(min-height, '100vh - #{pxToRem(48)}', null);
     max-width: pxToRem(1440);
-    margin: pxToRem(68) auto 0;
-    padding: pxToRem(12) pxToRem(8);
+    margin: pxToRem(48) auto 0;
+    padding: pxToRem(30) pxToRem(8);
     transition: height .12s ease-in-out, padding .12s ease-in-out;
     will-change: contents;
     width: 100%;
@@ -20,9 +19,9 @@
 
   @media(min-width: pxToRem(992)) {
     &_body {
-      @include calc(min-height, '100vh - #{pxToRem(100)}', null);
-      margin-top: pxToRem(100);
-      padding: pxToRem(30) pxToRem(30);
+      @include calc(min-height, '100vh - #{pxToRem(80)}', null);
+      margin-top: pxToRem(80);
+      padding: pxToRem(60) pxToRem(30);
     }
   }
 }
