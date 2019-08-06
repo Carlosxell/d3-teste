@@ -22,7 +22,7 @@ class HomePage extends Component {
   submitForm(e) { return e.preventDefault() }
 
   setList() {
-    let list;
+    let list = [];
 
     if(this.state.filter.length) {
       list = this.props.countries.filter(item => {

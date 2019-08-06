@@ -26,6 +26,8 @@
     padding: pxToRem(10) pxToRem(15) pxToRem(20);
     text-decoration: none;
 
+    &_grid {}
+
     &_title {
       font-size: pxToRem(18);
       margin-bottom: pxToRem(20);
@@ -35,17 +37,33 @@
       font-size: pxToRem(14);
       font-weight: 400;
       list-style: none;
-      margin: 0;
+      margin: 0 0 pxToRem(30);
       padding: 0;
 
       &_item {
-        margin-bottom: pxToRem(8);
+        margin-bottom: pxToRem(12);
+      }
+    }
+  }
+
+  @media(min-width: pxToRem(568)) {
+    &_body {
+      display: inline-block;
+
+      &_grid {
+        @include flexbox-container(flex, null, wrap, space-between, null, null);
+      }
+
+      &_list {
+        display: inline-block;
+        @include calc(width, '(100% - #{pxToRem(20)}) / 2', null);
       }
     }
   }
 
   @media(min-width: pxToRem(692)) {
     &_imgBox {
+      display: inline-block;
       min-height: pxToRem(120);
     }
 
@@ -54,5 +72,20 @@
     }
   }
 
-  @media(min-width: pxToRem(1200)) {}
+  @media(min-width: pxToRem(768)) {
+    @include flexbox-container(flex, null, space-between, null, center, center);
+
+    &_boxImg {
+      padding-top: 32.25%;
+      @include calc(width, '(100% - #{pxToRem(10)}) / 2', null);
+    }
+  }
+
+  @media(min-width: pxToRem(992)) {
+    &_body {
+      &_list {
+        font-size: pxToRem(18);
+      }
+    }
+  }
 }
